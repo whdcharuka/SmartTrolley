@@ -7,17 +7,17 @@ export default class Login extends React.Component{
         const {navigate} = this.props.navigation
         return(
             <View style={{backgroundColor:"#FFF",height:"100%"}}>
-                {/* <Image source ={require('../images/download.jpg')}
-                    style={{width:"10%",height:"10%",align:"center"}}
+                {/* <Image source ={require('../images/image.jpg')}
+                    style={{width:"100%",height:"43%",align:"center"}}
                 /> */}
                 <Text
                     style={{
                     fontSize:30,
                     fontFamily:"SemiBold",
                     alignSelf:"center",
-                    paddingVertical:50
+                    paddingVertical:100
                  }}
-                >Welcome Back</Text>
+                >Sign In</Text>
 
                 <Text
                     style={{
@@ -35,8 +35,9 @@ export default class Login extends React.Component{
                     flexDirection:"row",
                     alignItems:"center",
                     marginHorizontal:55,
-                    borderWidth:2,
-                    marginTop:50,
+                    // borderWidth:2,
+                    borderBottomWidth:1,
+                    marginTop:30,
                     paddingHorizontal:10,
                     borderColor:"black",
                     borderRadius:23,
@@ -54,7 +55,8 @@ export default class Login extends React.Component{
                     flexDirection:"row",
                     alignItems:"center",
                     marginHorizontal:55,
-                    borderWidth:2,
+                    // borderWidth:2,
+                    borderBottomWidth:1,
                     marginTop:15,
                     paddingHorizontal:10,
                     borderColor:"black",
@@ -63,7 +65,7 @@ export default class Login extends React.Component{
                 }}>
                     
                     <TextInput 
-                        placeholder="Password"
+                        placeholder="Password" 
                         placeholderTextColor="black"
                         style={{paddingHorizontal:10}}
                     />
@@ -84,25 +86,25 @@ export default class Login extends React.Component{
                     style={{
                     color:"white",
                     fontFamily:"SemiBold"
-                    }}>Login</Text>
+                    }}>LOGIN</Text>
                 </View>
                 <Text 
                     onPress={()=>navigate('ForgotPassword')}
                     style={{
                     alignSelf:"center",
-                    color:"black",
+                    color:"red",
                     fontFamily:"SemiBold",
-                    paddingVertical:30
+                    paddingVertical:30,
                 }}>Forgot Password?</Text>
 
-                <Text 
+                {/* <Text 
                     onPress={()=>navigate('Register')}
                     style={{
                     alignSelf:"center",
                     color:"black",
                     fontFamily:"SemiBold",
-                    paddingVertical:1
-                }}>New User</Text>
+                    paddingVertical:0
+                }}>New User</Text> */}
             </View>
         )
     }
