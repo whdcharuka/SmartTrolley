@@ -1,10 +1,11 @@
 import React from 'react';
 import {Text,View,Image, TextInput} from 'react-native';
+// import Feather from 'react-native-vector-icons/Feather';
 
 export default class Register extends React.Component{
 
     render(){
-        
+        const {navigate} = this.props.navigation
         return(
             <View style={{backgroundColor:"#FFF",height:"100%"}}>
                 {/* <Image source ={require('../images/image.jpg')}
@@ -15,9 +16,9 @@ export default class Register extends React.Component{
                     fontSize:30,
                     fontFamily:"SemiBold",
                     alignSelf:"center",
-                    paddingVertical:50
+                    paddingVertical:100
                  }}
-                >Welcome</Text>
+                >Sign Up</Text>
 
                 <Text
                     style={{
@@ -33,8 +34,28 @@ export default class Register extends React.Component{
                     flexDirection:"row",
                     alignItems:"center",
                     marginHorizontal:55,
-                    borderWidth:2,
-                    marginTop:50,
+                    // borderWidth:2,
+                    borderBottomWidth:1,
+                    marginTop:30,
+                    paddingHorizontal:10,
+                    borderColor:"black",
+                    borderRadius:23,
+                    paddingVertical:2
+                }}>
+                  
+                    <TextInput 
+                        placeholder="Full Name"
+                        placeholderTextColor="black"
+                        style={{paddingHorizontal:10}}
+                    />                 
+                </View>
+                <View style={{
+                    flexDirection:"row",
+                    alignItems:"center",
+                    marginHorizontal:55,
+                    // borderWidth:2,
+                    borderBottomWidth:1,
+                    marginTop:15,
                     paddingHorizontal:10,
                     borderColor:"black",
                     borderRadius:23,
@@ -53,7 +74,8 @@ export default class Register extends React.Component{
                     flexDirection:"row",
                     alignItems:"center",
                     marginHorizontal:55,
-                    borderWidth:2,
+                    // borderWidth:2,
+                    borderBottomWidth:1,
                     marginTop:15,
                     paddingHorizontal:10,
                     borderColor:"black",
@@ -67,14 +89,18 @@ export default class Register extends React.Component{
                         placeholderTextColor="black"
                         style={{paddingHorizontal:10}}
                     />   
-
+                {/* <Feather 
+                    name="eye-off"
+                    size={15}
+                /> */}
                 </View>
                 <View 
                     style={{
                     flexDirection:"row",
                     alignItems:"center",
                     marginHorizontal:55,
-                    borderWidth:2,
+                    // borderWidth:2,
+                    borderBottomWidth:1,
                     marginTop:15,
                     paddingHorizontal:10,
                     borderColor:"black",
@@ -88,6 +114,10 @@ export default class Register extends React.Component{
                         placeholderTextColor="black"
                         style={{paddingHorizontal:10}}
                     />
+                {/* <Feather 
+                    name="eye-off"
+                    size={15}
+                /> */}
                 </View>
 
                 <View 
@@ -104,8 +134,26 @@ export default class Register extends React.Component{
                         onPress={()=>navigate('Login')}style={{
                         color:"white",
                         fontFamily:"SemiBold"
-                    }}>Register</Text>
-                </View>             
+                    }}>Sign Up</Text>
+                </View>     
+
+                <Text
+                    style={{
+                    alignSelf:"center",
+                    color:"black",
+                    fontFamily:"SemiBold",
+                    paddingVertical:30,
+                }}>Already have an account? 
+
+                <Text 
+                    onPress={()=>navigate('Login')}
+                    style={{
+                    alignSelf:"center",
+                    color:"red",
+                    fontFamily:"SemiBold",
+                    paddingVertical:0,
+            }}>  Login</Text>    
+            </Text>                          
             </View>
         )
     }
